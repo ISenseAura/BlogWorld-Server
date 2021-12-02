@@ -33,12 +33,15 @@ class Posts extends Db {
 
     static getAllPosts() : Array<PostType> {
 
+      //if(this.data.posts) {
         let keys = Object.keys(this.data.posts);
         let posts : Array<PostType> = [];
         keys.forEach((key) => {
             posts.push(this.data.posts[key]);
         });
         return posts;
+       // }
+     
     }
 
     static get(id : string) : PostType {
