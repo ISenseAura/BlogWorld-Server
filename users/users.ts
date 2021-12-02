@@ -16,7 +16,7 @@ class Users extends Db {
         this.data.users[id] = userr;
         this.exportDatabase("users");
 
-        this.data.users.push(userr)
+
         let auth = {
             user: {
                 id : userr.id,
