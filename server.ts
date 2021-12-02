@@ -19,6 +19,7 @@ app.use(function (req, res, next) {
 });
 
 app.use("/api/auth", require("./routes/auth"));
+app.use("/api/posts", require("./routes/posts"));
 
 
 app.get('/', (req : any, res : any) => {
@@ -28,6 +29,6 @@ app.get('/', (req : any, res : any) => {
 Db.importDatabases();
 
 
-app.listen(3000, () => {
-    console.log('The application is listening on port 3000!');
+app.listen(5000, () => {
+    console.log('The application is listening on port 5000!');
 })
