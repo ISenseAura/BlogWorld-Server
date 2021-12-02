@@ -2,6 +2,7 @@ import express from "express";
 import hash = require("bcryptjs");
 import { body, validationResult } from "express-validator";
 import getuser from '../middleware/getuser';
+import {UserType} from "../types";
 
 import Users from "../users/users";
 import Posts from "../posts/posts";
@@ -27,56 +28,38 @@ router.post(
       return res.status(400).json({ errors: errors.array() });
     }
 
-    let salt = await hash.genSalt(10); //update later
-    let pass = await hash.hash(req.body.password, salt)
+    let user : any = Users.getById(req.user.id);
+    let body = {img : req.body.img, text : req.body.text}
 
-    req.body.password = pass;
+    let response = user.addPost(req.body.title,body);
 
-    let response = Users.addUser(req.body);
-
-    res.send({ "authtoken": response });
-
-
-   
+    let success = false;
+    if((typeof response).toLowerCase() == "object") success = true;
+    res.send({ success ,"post": response });
 
   });
 
 
-router.post('/emaillogin', [
-  body('email', 'Enter a valid email').isEmail(),
-  body('password', 'Password cannot be blank').exists(),
-], (req: any, res: any) => {
-
-  const errors = validationResult(req);
-  if (!errors.isEmpty()) {
-    return res.status(400).json({ errors: errors.array() });
-  }
+router.get('/posts', (req: any, res: any) => {
 
   let success = false;
-  const { email, password } = req.body;
-  if (!Users.emailExists(req.body.email.trim())) return res.send({success , msg : "Please authenticate using a valid email"});
+  let response = Posts.getAllPosts();
+  if(response.length) success = true;
+    res.json({ success, "post" : response })
 
-  let user = Users.getByEmail(email);
+});
 
-  if (user) {
-    let passCompare = hash.compare(password, user.password);
-    if (!passCompare) return res.send({success , msg : "Please authenticate using correct credentials"});
-    
-    let auth = {
-      user: {
-        id: user.id,
-        username: user.username,
-        email: user.email
-      }
-    }
-    let token: string = jwt.sign(auth, "test_token")
-  
+router.get('/delete/id:', getuser, (req: any, res: any) => {
+
+  let id = req.params.id.trim();
+  let success = false;
+  let pe = Posts.exists(id);
+
+  if(pe)  {
     success = true;
-    res.json({ success, token })
-
+    delete Posts.data.posts[id];
   }
-
-
+    res.json({ success})
 });
 
 
