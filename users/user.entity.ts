@@ -1,6 +1,7 @@
 
-import { UserType, Dict, BlogBody } from "../types";
+import { UserType, Dict, BlogBody, PostType } from "../types";
 import Db from "../db";
+import Users from "./users";
 import Posts from "../posts/posts";
 
 
@@ -21,9 +22,17 @@ class User implements UserType {
         this.posts = data.posts ? data.posts : [];
     }
 
-    addPost(title: string, data: Dict<BlogBody>): void {
-        let id = Posts.createPost(title,data,this.username);
+    public addPost(title: string, data: Dict<BlogBody>): PostType {
+        let id = Posts.createPost(title, data, this.username);
+        console.log(id);
         this.posts.push(id);
+        this.updateUser();
+        return Posts.get(id);
+    }
+
+    private updateUser(): void {
+        Users.data.users[this.id] = this;
+        Users.exportDatabase("users");
     }
 
 
