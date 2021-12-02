@@ -34,10 +34,9 @@ router.post(
 
     let success = false;
     if(response.length > 15) success = true;
-    
+    console.log(response);
     res.json({ success, "authtoken": response });
 
-    res.json({ "authtoken": response });
 
 
    
