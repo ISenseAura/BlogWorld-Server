@@ -60,7 +60,7 @@ class Users extends Db {
     }
 
     static getById(id: string) : UserType | null {
-        return this.data.users[id.trim()];
+        return new User(this.data.users[id.trim()]);
     }
 
 }
