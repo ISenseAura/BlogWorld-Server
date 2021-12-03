@@ -24,11 +24,12 @@ router.post(
   ],
   async (req: any, res: any) => {
     console.log("test")
+    console.log(req.body)
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.json({ errors: errors.array() });
     }
-    console.log(req.body)
+    
 
     let user : any = Users.getById(req.user.id);
     let body = {img : req.body.img, text : req.body.text}
