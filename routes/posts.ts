@@ -28,6 +28,7 @@ router.post(
     if (!errors.isEmpty()) {
       return res.json({ errors: errors.array() });
     }
+    console.log(req.body)
 
     let user : any = Users.getById(req.user.id);
     let body = {img : req.body.img, text : req.body.text}
