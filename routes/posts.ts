@@ -23,9 +23,10 @@ router.post(
     })
   ],
   async (req: any, res: any) => {
+    console.log("test")
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.status(400).json({ errors: errors.array() });
+      return res.json({ errors: errors.array() });
     }
 
     let user : any = Users.getById(req.user.id);
@@ -35,7 +36,7 @@ router.post(
 
     let success = false;
     if((typeof response).toLowerCase() == "object") success = true;
-    res.send({ success ,"post": response });
+    res.send({ success ,post: response });
 
   });
 
