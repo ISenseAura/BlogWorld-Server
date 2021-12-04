@@ -74,7 +74,7 @@ router.post('/emaillogin', [
     let token: string = jwt.sign(auth, "test_token")
   console.log(token);
     success = true;
-    res.json({ success, token })
+    res.json({ success, token ,name : user.username})
 
   }
 
