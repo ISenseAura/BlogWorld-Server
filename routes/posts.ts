@@ -55,28 +55,57 @@ router.get('/posts', (req: any, res: any) => {
 router.get('/posts/like/:id', (req: any, res: any) => {
 
   let success = false;
-  let response = Posts.getAllPosts();
-  if(response.length) success = true;
-    res.json({ success, "post" : response })
-
+   let id = req.params.id.trim();
+  let success = false;
+  let msg = "";
+  console.log(id);
+  let pe = Posts.exists(id);
+  let user = Users.get(req.user.id);
+  if(pe) {
+    let post = Posts.get(id);
+    if(!user.likes.include(id)) {
+    success = true;
+    user.likePost(id);
+      post.like();
+      Users.exportDatabase("users");
+    Posts.exportDatabase("posts");
+      msg = "Liked post"
+    }
+    else {
+      msg = "You have already liked this post"
+    }
+  }
+  else {
+    msg = "Post doesnt exist";
+  }
+    res.json({success,msg})
+  
 });
 
 router.get('/delete/:id', getuser, (req: any, res: any) => {
 
   let id = req.params.id.trim();
   let success = false;
+  let msg = "";
   console.log(id);
   let pe = Posts.exists(id);
-console.log(pe);
+
   if(pe) {
+    let post = Posts.get(id);
+    if(Db.toId(post.author) == req.user.id) {
     success = true;
     delete Posts.data.posts[id];
     Posts.exportDatabase("posts");
+      msg = "Post deleted"
+    }
+    else {
+      msg = "Access Denied"
+    }
   }
   else {
-    console.log("post doesnt exist");
+    msg = "Post doesnt exist";
   }
-    res.json({success})
+    res.json({success,msg})
 });
 
 
