@@ -65,13 +65,18 @@ router.get('/delete/:id', getuser, (req: any, res: any) => {
 
   let id = req.params.id.trim();
   let success = false;
+  console.log(id);
   let pe = Posts.exists(id);
-
-  if(pe)  {
+console.log(pe);
+  if(pe) {
     success = true;
     delete Posts.data.posts[id];
+    Posts.exportDatabase("posts");
   }
-    res.json({ success})
+  else {
+    console.log("post doesnt exist");
+  }
+    res.json({success})
 });
 
 

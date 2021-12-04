@@ -49,7 +49,7 @@ class Posts extends Db {
     }
 
     static exists(id : string) : boolean {
-        if(!this.data.posts[id.trim()]) return false;
+        if(!this.data.posts[id]) return false;
         return true;
     }
  
