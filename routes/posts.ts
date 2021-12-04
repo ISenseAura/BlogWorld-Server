@@ -61,7 +61,7 @@ router.get('/posts/like/:id', (req: any, res: any) => {
 
 });
 
-router.get('/delete/id:', getuser, (req: any, res: any) => {
+router.get('/delete/:id', getuser, (req: any, res: any) => {
 
   let id = req.params.id.trim();
   let success = false;
