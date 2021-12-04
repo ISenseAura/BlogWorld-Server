@@ -1,5 +1,6 @@
 import type  { PostType,BlogBody,Dict }  from "../types";
 import Db from "../db";
+import Posts from "./posts"
 
 
 class Post implements PostType {
@@ -40,6 +41,11 @@ class Post implements PostType {
         this.body[id] =  modified;
         this.dateModified = new Date();
         return "Blog has been edited";
+    }
+
+ private updatePost(): void {
+        Posts.data.posts[this.id] = this;
+        Posts.exportDatabase("posts");
     }
 
 }

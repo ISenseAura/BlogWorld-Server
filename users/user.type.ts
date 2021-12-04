@@ -5,6 +5,8 @@ interface UserType {
     email : string;
     password : string;
     posts : Array<string>;
+    likes? : Array<string>;
+    dislikes? : Array<string>;
 }
 
 interface AuthorType {

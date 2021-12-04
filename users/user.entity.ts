@@ -12,6 +12,8 @@ class User implements UserType {
     public password: string;
     public joined_on: Date;
     public posts: Array<string>;
+    public likes : Array<string>;
+    public dislikes : Array<string>;
 
     constructor(data: UserType) {
         this.username = data.username;
@@ -20,6 +22,8 @@ class User implements UserType {
         this.password = data.password;
         this.joined_on = new Date();
         this.posts = data.posts ? data.posts : [];
+        this.likes : data.likes ? data.likes : [];
+      this.dislikes : data.dislikes ? data.dislikes : [];
     }
 
     public addPost(title: string, data: Dict<BlogBody>): PostType {
@@ -29,6 +33,24 @@ class User implements UserType {
         this.updateUser();
         return Posts.get(id);
     }
+
+public likePost(id:string) : boolean {
+  let post = posts.get(id);
+  post.like();
+  post.updatePost();
+  this.likes.push(id);
+  this.updateUser();
+  return true;
+}
+
+public dislikePost(id:string) : boolean {
+  let post = posts.get(id);
+  post.dislike();
+  post.updatePost();
+  this.dislikes.push(id);
+  this.updateUser();
+  return true;
+}
 
     private updateUser(): void {
         Users.data.users[this.id] = this;
