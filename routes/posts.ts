@@ -52,6 +52,15 @@ router.get('/posts', (req: any, res: any) => {
 
 });
 
+router.get('/posts/like/:id', (req: any, res: any) => {
+
+  let success = false;
+  let response = Posts.getAllPosts();
+  if(response.length) success = true;
+    res.json({ success, "post" : response })
+
+});
+
 router.get('/delete/id:', getuser, (req: any, res: any) => {
 
   let id = req.params.id.trim();
