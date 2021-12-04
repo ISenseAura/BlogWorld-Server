@@ -92,7 +92,7 @@ router.get('/delete/:id', getuser, (req: any, res: any) => {
 
   if(pe) {
     let post = Posts.get(id);
-    if(Posts.toId(post.author) == req.user.id) {
+    if(Posts.toId(post.author) === req.user.id) {
     success = true;
     delete Posts.data.posts[id];
     Posts.exportDatabase("posts");
