@@ -56,7 +56,7 @@ router.get('/posts/like/:id', (req: any, res: any) => {
 
   let success = false;
    let id = req.params.id.trim();
-  let success = false;
+  
   let msg = "";
   console.log(id);
   let pe = Posts.exists(id);
