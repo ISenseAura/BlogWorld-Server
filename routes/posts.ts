@@ -66,7 +66,7 @@ router.get('/posts/like/:id', (req: any, res: any) => {
     if(!user.likes.include(id)) {
     success = true;
     user.likePost(id);
-      post.like();
+    
       Users.exportDatabase("users");
     Posts.exportDatabase("posts");
       msg = "Liked post"

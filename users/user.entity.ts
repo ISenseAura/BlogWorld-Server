@@ -36,8 +36,10 @@ class User implements UserType {
 
 public likePost(id:string) : boolean {
   let post = posts.get(id);
+  if(this.likes.includes(id)) return false;
   post.like();
   post.updatePost();
+
   this.likes.push(id);
   this.updateUser();
   return true;
@@ -45,6 +47,7 @@ public likePost(id:string) : boolean {
 
 public dislikePost(id:string) : boolean {
   let post = posts.get(id);
+   if(this.dislikes.includes(id)) return false;
   post.dislike();
   post.updatePost();
   this.dislikes.push(id);
