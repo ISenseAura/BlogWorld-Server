@@ -1,28 +1,4 @@
-{
-  "contributetothissite123812zerapium": {
-    "title": "Contribute to this site ",
-    "author": "Zerapium",
-    "dateCreated": "2021-12-04T12:38:12.977Z",
-    "id": "contributetothissite123812zerapium",
-    "dateModified": "2021-12-04T12:38:12.977Z",
-    "body": {
-      "img": "https://i.ibb.co/ScHM7kq/IMG-20211204-154011.jpg",
-      "text": "I'm looking for a front-end developer to contribute to this project. You will be responsible for Designs and Data fetching. DM me for more."
-    },
-    "likes": 0,
-    "dislikes": 0
-  },
-  "workinprogress150823mayur": {
-    "title": "Work In Progress",
-    "author": "Mayur$(❤)",
-    "dateCreated": "2021-12-04T15:08:23.065Z",
-    "id": "workinprogress150823mayur",
-    "dateModified": "2021-12-04T15:08:23.065Z",
-    "body": {
-      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSvJMpzljhyvWK98c1ov__AfP_iRdaeERtzQ&usqp=CAU",
-      "text": "Yeah I'm just testing. Everything seems to work fine just need to improve user interface. Like and Dislike buttons don't work for now."
-    },
-    "likes": 0,
-    "dislikes": 0
-  }
-}
+{"contributetothissite123812zerapium":{"title":"Contribute to this site ","author":"Zerapium","dateCreated":"2021-12-04T12:38:12.977Z","id":"contributetothissite123812zerapium","dateModified":"2021-12-04T12:38:12.977Z","body":{"img":"https://i.ibb.co/ScHM7kq/IMG-20211204-154011.jpg","text":"I'm looking for a front-end developer to contribute to this project. You will be responsible for Designs and Data fetching. DM me for more."},
+"likes":0,"dislikes":1},
+"workinprogress150823mayur":{"title":"Work In Progress","author":"Mayur$(❤)","dateCreated":"2021-12-04T15:08:23.065Z","id":"workinprogress150823mayur","dateModified":"2021-12-04T15:08:23.065Z","body":{"img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSvJMpzljhyvWK98c1ov__AfP_iRdaeERtzQ&usqp=CAU","text":"Yeah I'm just testing. Everything seems to work fine just need to improve user interface. Like and Dislike buttons don't work for now."},
+"likes":1,"dislikes":0}}
