@@ -82,6 +82,39 @@ router.get('/like/:id', getuser,  (req: any, res: any) => {
   
 });
 
+
+router.get('/dislike/:id', getuser,  (req: any, res: any) => {
+
+  let success = false;
+   let id = req.params.id.trim();
+  
+  let msg = "";
+  console.log(id);
+  let pe = Posts.exists(id);
+  let user = Users.getById(req.user.id);
+  if(pe) {
+    let post = Posts.get(id);
+    if(!user.dislikes.includes(id)) {
+    success = true;
+    user.dislikePost(id);
+    
+      Users.exportDatabase("users");
+    Posts.exportDatabase("posts");
+      msg = "Disliked post"
+    }
+    else {
+      msg = "You have already disliked this post"
+    }
+  }
+  else {
+    msg = "Post doesnt exist";
+  }
+    res.json({success,msg})
+  
+});
+
+
+
 router.get('/delete/:id', getuser, (req: any, res: any) => {
 
   let id = req.params.id.trim();

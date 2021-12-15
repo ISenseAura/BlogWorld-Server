@@ -47,7 +47,7 @@ public likePost(id:string) : boolean {
 }
 
 public dislikePost(id:string) : boolean {
-  let post = posts.get(id);
+  let post = Posts.get(id);
    if(this.dislikes.includes(id)) return false;
   post.dislike();
   post.updatePost();
