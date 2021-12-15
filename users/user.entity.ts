@@ -21,9 +21,9 @@ class User implements UserType {
         this.email = data.email;
         this.password = data.password;
         this.joined_on = new Date();
-        this.posts = data.posts ? data.posts : [];
-        this.likes : data.likes ? data.likes : [];
-      this.dislikes : data.dislikes ? data.dislikes : [];
+        this.posts = data.posts ? data.posts : [""];
+        this.likes : data.likes ? data.likes : [""];
+      this.dislikes : data.dislikes ? data.dislikes : [""];
     }
 
     public addPost(title: string, data: Dict<BlogBody>): PostType {
