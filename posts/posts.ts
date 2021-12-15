@@ -45,7 +45,7 @@ class Posts extends Db {
     }
 
     static get(id : string) : PostType {
-        return this.data.posts[id.trim()];
+        return new Post(this.data.posts[id.trim()]);
     }
 
     static exists(id : string) : boolean {
