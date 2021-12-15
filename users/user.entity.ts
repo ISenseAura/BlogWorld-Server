@@ -36,6 +36,7 @@ class User implements UserType {
 
 public likePost(id:string) : boolean {
   let post = Posts.get(id);
+  console.log(post);
   if(this.likes.includes(id)) return false;
   post.like();
   post.updatePost();
