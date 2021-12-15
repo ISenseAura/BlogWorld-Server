@@ -22,8 +22,8 @@ class User implements UserType {
         this.password = data.password;
         this.joined_on = new Date();
         this.posts = data.posts ? data.posts : [""];
-        this.likes : data.likes ? data.likes : [""];
-      this.dislikes : data.dislikes ? data.dislikes : [""];
+        this.likes = data.likes ? data.likes : [""];
+      this.dislikes = data.dislikes ? data.dislikes : [""];
     }
 
     public addPost(title: string, data: Dict<BlogBody>): PostType {
@@ -35,7 +35,7 @@ class User implements UserType {
     }
 
 public likePost(id:string) : boolean {
-  let post = posts.get(id);
+  let post = Posts.get(id);
   if(this.likes.includes(id)) return false;
   post.like();
   post.updatePost();

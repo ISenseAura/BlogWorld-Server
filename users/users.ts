@@ -61,7 +61,8 @@ class Users extends Db {
 
     static getById(id: string) : UserType | null {
       console.log(this.data.users[id]);
-      
+            console.log(new User(this.data.users[id.trim()]));
+
         return new User(this.data.users[id.trim()]);
     }
 
