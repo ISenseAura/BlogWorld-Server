@@ -38,6 +38,9 @@ public likePost(id:string) : boolean {
   let post = Posts.get(id);
   console.log(post);
   if(this.likes.includes(id)) return false;
+  if(this.dislikes.includes(id) && post.dislikes > 0) {
+    post.dislikes = post.dislikes - 1;
+  }
   post.like();
   post.updatePost();
 
@@ -49,6 +52,9 @@ public likePost(id:string) : boolean {
 public dislikePost(id:string) : boolean {
   let post = Posts.get(id);
    if(this.dislikes.includes(id)) return false;
+   if(this.likes.includes(id) && post.likes > 0) {
+    post.likes = post.likes - 1;
+  }
   post.dislike();
   post.updatePost();
   this.dislikes.push(id);
