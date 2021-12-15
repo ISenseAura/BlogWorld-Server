@@ -52,7 +52,7 @@ router.get('/posts', (req: any, res: any) => {
 
 });
 
-router.get('/posts/like/:id', (req: any, res: any) => {
+router.get('/like/:id', getuser,  (req: any, res: any) => {
 
   let success = false;
    let id = req.params.id.trim();
@@ -60,10 +60,10 @@ router.get('/posts/like/:id', (req: any, res: any) => {
   let msg = "";
   console.log(id);
   let pe = Posts.exists(id);
-  let user = Users.get(req.user.id);
+  let user = Users.getById(req.user.id);
   if(pe) {
     let post = Posts.get(id);
-    if(!user.likes.include(id)) {
+    if(!user.likes.includes(id)) {
     success = true;
     user.likePost(id);
     
