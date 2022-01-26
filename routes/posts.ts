@@ -52,7 +52,7 @@ router.get('/posts', (req: any, res: any) => {
 
 });
 
-router.get('/get/:id', (req: any, res: any) => {
+router.get('/post/:id', (req: any, res: any) => {
 
  let success = false;
    let id = req.params.id.trim();
