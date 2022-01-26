@@ -34,7 +34,7 @@ router.post(
     let user : any = Users.getById(req.user.id);
     let body = {img : req.body.img, text : req.body.text}
 
-    let response = user.addPost(req.body.title,body,req.body.sdescription);
+    let response = user.addPost(req.body.title,body,req.body.short);
 
     let success = false;
     if((typeof response).toLowerCase() == "object") success = true;
