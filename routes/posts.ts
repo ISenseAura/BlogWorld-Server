@@ -52,6 +52,27 @@ router.get('/posts', (req: any, res: any) => {
 
 });
 
+router.get('/get/:id', (req: any, res: any) => {
+
+ let success = false;
+   let id = req.params.id.trim();
+  
+  let msg = "";
+  console.log(id);
+  let pe = Posts.exists(id);
+  if(pe) {
+    let post = Posts.get(id);
+    success = true;
+    }
+    else {
+      msg = "Post not found"
+    }
+  
+    res.json({success,msg})
+  
+
+});
+
 router.get('/like/:id', getuser,  (req: any, res: any) => {
 
   let success = false;
