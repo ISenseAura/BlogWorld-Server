@@ -11,6 +11,7 @@ class Post implements PostType {
     dateCreated : Date;
     dateModified? : Date;
     body : Dict<BlogBody>;
+  short : string;
     likes : number;
     dislikes : number;
 
