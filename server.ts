@@ -21,7 +21,6 @@ app.use(function (req, res, next) {
 
 
 app.use("/api/auth", require("./routes/auth"));
-
 app.use(function (req, res, next) {
 
     res.setHeader('Access-Control-Allow-Origin', '*');
@@ -34,8 +33,6 @@ app.use(function (req, res, next) {
 
     next();
 });
-
-
 app.use("/api/posts", require("./routes/posts"));
 
 

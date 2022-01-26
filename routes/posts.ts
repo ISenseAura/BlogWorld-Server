@@ -44,6 +44,7 @@ router.post(
 
 
 router.get('/posts', (req: any, res: any) => {
+    res.setHeader('Access-Control-Allow-Origin', '*');
 
   let success = false;
   let response = Posts.getAllPosts();
