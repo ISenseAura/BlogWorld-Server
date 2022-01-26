@@ -68,7 +68,7 @@ router.get('/post/:id', (req: any, res: any) => {
     else {
       msg = "Post not found"
     }
-  
+  console.log(post);
     res.json({success,post})
   
 
