@@ -22,6 +22,7 @@ class Post implements PostType {
         this.id = data.id ? data.id : Db.toId(this.title + this.dateCreated.toString().split(" ")[4] + this.author);
         this.dateModified = data.dateModified ? data.dateModified : new Date();
         this.body = data.body ? data.body : {};
+      this.short = data.short ? data.short : '';
         this.likes = data.likes ? data.likes : 0;
         this.dislikes = data.dislikes ? data.dislikes : 0;
     }

@@ -26,8 +26,8 @@ class User implements UserType {
       this.dislikes = data.dislikes ? data.dislikes : [""];
     }
 
-    public addPost(title: string, data: Dict<BlogBody>): PostType {
-        let id = Posts.createPost(title, data, this.username);
+    public addPost(title: string, data: Dict<BlogBody>, short : string): PostType {
+        let id = Posts.createPost(title, data, this.username,short);
         console.log(id);
         this.posts.push(id);
         this.updateUser();
