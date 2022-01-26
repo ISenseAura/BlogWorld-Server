@@ -56,12 +56,13 @@ router.get('/post/:id', (req: any, res: any) => {
 
  let success = false;
    let id = req.params.id.trim();
+  let post;
   
   let msg = "";
   console.log(id);
   let pe = Posts.exists(id);
   if(pe) {
-    let post = Posts.get(id);
+     post = Posts.get(id);
     success = true;
     }
     else {
