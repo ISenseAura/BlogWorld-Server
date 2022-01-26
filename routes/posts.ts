@@ -68,7 +68,7 @@ router.get('/get/:id', (req: any, res: any) => {
       msg = "Post not found"
     }
   
-    res.json({success,msg})
+    res.json({success,post})
   
 
 });
