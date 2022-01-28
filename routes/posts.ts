@@ -89,7 +89,7 @@ router.get('/like/:id', getuser,  (req: any, res: any) => {
   let user = Users.getById(req.user.id);
   if(pe) {
     let post = Posts.get(id);
-    if(!user.likes.includes(id)) {
+    if(user && !user.likes.includes(id)) {
     success = true;
     user.likePost(id);
     
@@ -120,7 +120,7 @@ router.get('/dislike/:id', getuser,  (req: any, res: any) => {
   let user = Users.getById(req.user.id);
   if(pe) {
     let post = Posts.get(id);
-    if(!user.dislikes.includes(id)) {
+    if(user && !user.dislikes.includes(id)) {
     success = true;
     user.dislikePost(id);
     
@@ -136,6 +136,32 @@ router.get('/dislike/:id', getuser,  (req: any, res: any) => {
     msg = "Post doesnt exist";
   }
     res.json({success,msg})
+  
+});
+
+
+router.post('/comment/:id', getuser,  (req: any, res: any) => {
+console.log(req.body);
+let id = req.params.id;
+let success = false;
+let msg = "";
+console.log(id);
+let pe = Posts.exists(id);
+if(pe) {
+  let post = Posts.get(id);
+ post.addComment(req.user.username, req.user.email, req.body.text);
+    Users.exportDatabase("users");
+
+  Posts.exportDatabase("posts");
+  success = true;
+    msg = "Done!";
+  }
+  else {
+    msg = "Some internal error occured and we could not proceed that post"
+  }
+
+
+res.json({success,msg});
   
 });
 

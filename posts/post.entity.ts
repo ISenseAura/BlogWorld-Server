@@ -1,4 +1,4 @@
-import type  { PostType,BlogBody,Dict }  from "../types";
+import type  { PostType,Comment, BlogBody,Dict }  from "../types";
 import Db from "../db";
 import Posts from "./posts"
 
@@ -14,6 +14,8 @@ class Post implements PostType {
   short : string;
     likes : number;
     dislikes : number;
+    comments : Array<Comment>;
+
 
     constructor(data: PostType) {
         this.title = data.title;
@@ -25,6 +27,7 @@ class Post implements PostType {
       this.short = data.short ? data.short : '';
         this.likes = data.likes ? data.likes : 0;
         this.dislikes = data.dislikes ? data.dislikes : 0;
+        this.comments = data.comments ? data.comments : [];
     }
 
 
@@ -45,7 +48,18 @@ class Post implements PostType {
         return "Blog has been edited";
     }
 
- private updatePost(): void {
+    addComment(user  : string, email  : string, text : string) : void {
+    let com : Comment = {
+        username : user,
+        email : email,
+        text : text,
+        date : new Date()
+    }
+    this.comments.push(com);
+    this.updatePost();
+    }
+ 
+   updatePost(): void {
         Posts.data.posts[this.id] = this;
         Posts.exportDatabase("posts");
     }

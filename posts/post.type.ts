@@ -4,6 +4,13 @@ interface BlogBody {
     img : string;
 }
 
+interface Comment {
+    date : Date,
+    username : string,
+    email : string,
+    text : string
+}
+
 
 interface PostType {
     title : string;
@@ -15,6 +22,11 @@ interface PostType {
     short: string;
     likes : number;
     dislikes : number;
+    comments : Array<Comment>,
+    like() : void;
+    dislike() : void;
+    updatePost() : void;
+    addComment(user  : string, email  : string, text : string) : void;
 }
 
-export {BlogBody, PostType};
+export {BlogBody, PostType, Comment};
