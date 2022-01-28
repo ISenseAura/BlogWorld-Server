@@ -16,10 +16,13 @@ const router: any = express.Router();
 router.post(
   "/create", getuser,
   [
-    body("title", "Enter a valid post title (minimum 5 letters maximum 30 letters").isLength({ min: 5,max:30 }),
+    body("title", "Enter a valid post title (minimum 5 letters maximum 50 letters").isLength({ min: 5,max:50 }),
     body("img", "Enter a valid image link").isLength({min : 3}),
     body("text", "Enter some more text").isLength({
-      min: 10
+      min: 50
+    }),
+    body("short", "Enter a short description (minimum 20 letters maximum 70 letters)").isLength({
+      min: 20,max : 70
     })
   ],
   async (req: any, res: any) => {
