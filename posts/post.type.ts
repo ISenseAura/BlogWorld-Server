@@ -2,13 +2,17 @@ import type  { Dict }  from "../types";
 interface BlogBody {
     text : string;
     img : string;
+    date : Date;
+    title : string;
+    id : string;
 }
 
 interface Comment {
     date : Date,
     username : string,
     email : string,
-    text : string
+    text : string,
+    id : string
 }
 
 
@@ -18,7 +22,7 @@ interface PostType {
     author : string;
     dateCreated : Date;
     dateModified? : Date;
-    body : Dict<BlogBody>;
+    body : Array<BlogBody>;
     short: string;
     likes : number;
     dislikes : number;
@@ -26,6 +30,7 @@ interface PostType {
     like() : void;
     dislike() : void;
     updatePost() : void;
+    editBlog(img : string, txt : string, title : string) : void;
     addComment(user  : string, email  : string, text : string) : void;
 }
 

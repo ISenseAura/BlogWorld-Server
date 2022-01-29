@@ -14,7 +14,8 @@ class Posts extends Db {
             let postData: any = {};
             postData.title = title;
             postData.author = author;
-            postData.body = body;
+            postData.body = [];
+            postData.body.push(body);
           postData.short = short;
 
             let post = new Post(postData);

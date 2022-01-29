@@ -28,18 +28,35 @@ router.post(
   async (req: any, res: any) => {
     console.log("test")
     console.log(req.body)
+    let success =  false;
+    let msg ='';
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
-      return res.json({ errors: errors.array() });
+      return res.json({success,  errors: errors.array() });
     }
     
 
     let user : any = Users.getById(req.user.id);
     let body = {img : req.body.img, text : req.body.text}
 
+    if(req.body.postid.length > 5) {
+      let pid = req.body.postid.trim();
+      let pe = Posts.exists(pid);
+      if(pe) {
+         let post = Posts.get(pid);
+         post.editBlog(body.img, body.text, req.body.title)
+        success = true;
+        msg = "Successful"
+        }
+        else {
+          msg = "Post not found"
+        }
+        return res.send({ success ,msg });
+    }
+
     let response = user.addPost(req.body.title,body,req.body.short);
 
-    let success = false;
+    
     if((typeof response).toLowerCase() == "object") success = true;
     res.send({ success ,post: response });
 
