@@ -28,7 +28,9 @@ router.post(
     let salt = await hash.genSalt(10); //update later
     let pass = await hash.hash(req.body.password, salt)
 
+    
     req.body.password = pass;
+    req.body.ip = req.headers['x-forwarded-for'] || req.socket.remoteAddress;
 
     let response = Users.addUser(req.body);
 
