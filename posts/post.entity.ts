@@ -41,9 +41,10 @@ class Post implements PostType {
         return this.dislikes;
     }
 
-    editBlog(img : string, txt : string, title : string) : void {
+    editBlog(u : string, img : string, txt : string, title : string) : void {
         let bd : BlogBody = {
             text : txt,
+      username : u,
             img : img,
             title : title,
             date : new Date(),

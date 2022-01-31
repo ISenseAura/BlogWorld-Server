@@ -44,7 +44,7 @@ router.post(
       let pe = Posts.exists(pid);
       if(pe) {
          let post = Posts.get(pid);
-         post.editBlog(body.img, body.text, req.body.title)
+         post.editBlog(req.user.username,body.img, body.text, req.body.title)
         success = true;
         msg = "Successful"
         }
