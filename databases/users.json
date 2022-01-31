@@ -1,9 +1,123 @@
-{"mayurrrr":{"username":"Mayurrrr","id":"mayurrrr","email":"dkdkdkkde@sks.sosk","password":"$2a$10$CDZb9f5iBlbIwXe0HXadXO6/2MbldHDTHTFPMbemjIp9nhusOPv7q","joined_on":"2021-12-02T15:21:34.432Z","posts":[],"likes":[]},
-"mayurrtrr":{"username":"Mayurrtrr","id":"mayurrtrr","email":"dkdkdkjkde@sks.sosk","password":"$2a$10$7eQkQqAqPc4aFsEjYKKW1.cpg93QguVAOS7cjDHo9fD1/.ZnPV0Zq","joined_on":"2021-12-02T15:34:06.285Z","posts":["title153406mayurrtrr"],"likes":[]},
-"zerapium":{"username":"Zerapium","id":"zerapium","email":"mmm@mm.com","password":"$2a$10$ijE4bdAig4hLijY3HIvzDeHDVxxTM.RABnl5M6UUamCR2rsa95GMq","joined_on":"2022-01-31T12:32:08.369Z","posts":["consolelogreqbody095315zerapium","testingpurpose112556zerapium","hhhhhhh074421zerapium","hhhhhhhhhhh075654zerapium","ttttttt085149zerapium","contributetothissite101130zerapium","contributetothissite101240zerapium","ttttttt112321zerapium","tttttt113305zerapium","contributetothissite123812zerapium","atestpost052125zerapium","imageerror120355zerapium","anothertest120502zerapium","atestpost100628zerapium","atestpost100827zerapium","testtesttesttesttesttest123208zerapium"],"likes":["workinprogress150823mayur","atestpost052125zerapium","imageerror120355zerapium"],"dislikes":["","atestpost052125zerapium"]},
-"mayur":{"username":"Mayur$(❤)","id":"mayur","email":"a@b.com","password":"$2a$10$XqGFZaw2vCW7kL5bK2A8cOFIxVZcaj9gvVVoU3V8gYPylTzNnXbsu","joined_on":"2022-01-26T05:25:22.292Z","posts":["workinprogress150823mayur"],"likes":["contributetothissite123812zerapium","workinprogress150823mayur","atestpost052125zerapium"],"dislikes":[""]},
-"drcooper":{"username":"Dr. Cooper","id":"drcooper","email":"mayurhiwale2451982@gmail.com","password":"$2a$10$dtvKJAm361l3EoHt.IIO5OGFQl00YuJm9ZZmla.BvnGppDgvHHqKG","joined_on":"2021-12-07T05:55:30.824Z","posts":[]},
-"ujjwal":{"username":"Ujjwal","id":"ujjwal","email":"ujjwalsingh26350@gmail.comfdhvbhdf","password":"$2a$10$ioVRpgM8r/BRYpHbEQzWB.Mw2LmfOgMeINcqkHZ1G/yPhogzBTquW","joined_on":"2021-12-15T13:23:22.432Z","posts":["ddddddddddd110600ujjwal"],"likes":["contributetothissite123812zerapium","workinprogress150823mayur"],"dislikes":["contributetothissite123812zerapium","workinprogress150823mayur"]},
-"snehakdas":{"username":"snehak_das","id":"snehakdas","email":"kashishagarwal190305@gmail.com","password":"$2a$10$7AiCQHdqktwW8BBz.dNZvek6ScI9aJYiCg4.LVjhJDSe5W8SYv1L2","joined_on":"2022-01-04T15:57:36.620Z","posts":[""],"likes":["","contributetothissite123812zerapium","workinprogress150823mayur"],"dislikes":["","contributetothissite123812zerapium"]},
-"drshelly":{"username":"Dr.Shelly ","id":"drshelly","email":"sheldon@cooper.com","password":"$2a$10$a/ZtAwipmeN9cUUZHlixGuA6X0KcE6zbMxQR.Jsv3waelC3CIr6I6","joined_on":"2022-01-30T04:03:13.666Z","posts":["","anothertestpost035603drshelly"],"likes":["","atestpost052125zerapium","whatsnew162437zerapium"],"dislikes":["","anothertestpost035603drshelly","whatsnew162437zerapium"]},
-"terrorhand":{"username":"TerrorHand","id":"terrorhand","email":"abcdef@ghij.com","password":"$2a$10$l6oI40pUXwedv6jCetzaIuuyW6.Dtr1hKo3fkvRlHX66th4nK5ND.","joined_on":"2022-01-29T15:21:47.402Z","posts":[""],"likes":[""],"dislikes":[""]}}
+{
+  "mayurrrr": {
+    "username": "Mayurrrr",
+    "id": "mayurrrr",
+    "email": "dkdkdkkde@sks.sosk",
+    "password": "$2a$10$CDZb9f5iBlbIwXe0HXadXO6/2MbldHDTHTFPMbemjIp9nhusOPv7q",
+    "joined_on": "2021-12-02T15:21:34.432Z",
+    "posts": [],
+    "likes": []
+  },
+  "mayurrtrr": {
+    "username": "Mayurrtrr",
+    "id": "mayurrtrr",
+    "email": "dkdkdkjkde@sks.sosk",
+    "password": "$2a$10$7eQkQqAqPc4aFsEjYKKW1.cpg93QguVAOS7cjDHo9fD1/.ZnPV0Zq",
+    "joined_on": "2021-12-02T15:34:06.285Z",
+    "posts": ["title153406mayurrtrr"],
+    "likes": []
+  },
+  "zerapium": {
+    "username": "Zerapium",
+    "id": "zerapium",
+    "email": "mmm@mm.com",
+    "password": "$2a$10$ijE4bdAig4hLijY3HIvzDeHDVxxTM.RABnl5M6UUamCR2rsa95GMq",
+    "joined_on": "2022-01-31T12:32:08.369Z",
+    "posts": [
+      "consolelogreqbody095315zerapium",
+      "testingpurpose112556zerapium",
+      "hhhhhhh074421zerapium",
+      "hhhhhhhhhhh075654zerapium",
+      "ttttttt085149zerapium",
+      "contributetothissite101130zerapium",
+      "contributetothissite101240zerapium",
+      "ttttttt112321zerapium",
+      "tttttt113305zerapium",
+      "contributetothissite123812zerapium",
+      "atestpost052125zerapium",
+      "imageerror120355zerapium",
+      "anothertest120502zerapium",
+      "atestpost100628zerapium",
+      "atestpost100827zerapium",
+      "testtesttesttesttesttest123208zerapium"
+    ],
+    "likes": [
+      "workinprogress150823mayur",
+      "atestpost052125zerapium",
+      "imageerror120355zerapium"
+    ],
+    "dislikes": ["", "atestpost052125zerapium"]
+  },
+  "mayur": {
+    "username": "Mayur$(❤)",
+    "id": "mayur",
+    "email": "a@b.com",
+    "password": "$2a$10$XqGFZaw2vCW7kL5bK2A8cOFIxVZcaj9gvVVoU3V8gYPylTzNnXbsu",
+    "joined_on": "2022-01-26T05:25:22.292Z",
+    "posts": ["workinprogress150823mayur"],
+    "likes": [
+      "contributetothissite123812zerapium",
+      "workinprogress150823mayur",
+      "atestpost052125zerapium"
+    ],
+    "dislikes": [""]
+  },
+  "drcooper": {
+    "username": "Dr. Cooper",
+    "id": "drcooper",
+    "email": "mayurhiwale2451982@gmail.com",
+    "password": "$2a$10$dtvKJAm361l3EoHt.IIO5OGFQl00YuJm9ZZmla.BvnGppDgvHHqKG",
+    "joined_on": "2021-12-07T05:55:30.824Z",
+    "posts": []
+  },
+  "ujjwal": {
+    "username": "Ujjwal",
+    "id": "ujjwal",
+    "email": "ujjwalsingh26350@gmail.comfdhvbhdf",
+    "password": "$2a$10$ioVRpgM8r/BRYpHbEQzWB.Mw2LmfOgMeINcqkHZ1G/yPhogzBTquW",
+    "joined_on": "2021-12-15T13:23:22.432Z",
+    "posts": ["ddddddddddd110600ujjwal"],
+    "likes": [
+      "contributetothissite123812zerapium",
+      "workinprogress150823mayur"
+    ],
+    "dislikes": [
+      "contributetothissite123812zerapium",
+      "workinprogress150823mayur"
+    ]
+  },
+  "snehakdas": {
+    "username": "snehak_das",
+    "id": "snehakdas",
+    "email": "kashishagarwal190305@gmail.com",
+    "password": "$2a$10$7AiCQHdqktwW8BBz.dNZvek6ScI9aJYiCg4.LVjhJDSe5W8SYv1L2",
+    "joined_on": "2022-01-04T15:57:36.620Z",
+    "posts": [""],
+    "likes": [
+      "",
+      "contributetothissite123812zerapium",
+      "workinprogress150823mayur"
+    ],
+    "dislikes": ["", "contributetothissite123812zerapium"]
+  },
+  "drshelly": {
+    "username": "Dr.Shelly ",
+    "id": "drshelly",
+    "email": "sheldon@cooper.com",
+    "password": "$2a$10$a/ZtAwipmeN9cUUZHlixGuA6X0KcE6zbMxQR.Jsv3waelC3CIr6I6",
+    "joined_on": "2022-01-30T04:03:13.666Z",
+    "posts": ["", "anothertestpost035603drshelly"],
+    "likes": ["", "atestpost052125zerapium", "whatsnew162437zerapium"],
+    "dislikes": ["", "anothertestpost035603drshelly", "whatsnew162437zerapium"]
+  },
+  "terrorhand": {
+    "username": "TerrorHand",
+    "id": "terrorhand",
+    "email": "abcdef@ghij.com",
+    "password": "$2a$10$l6oI40pUXwedv6jCetzaIuuyW6.Dtr1hKo3fkvRlHX66th4nK5ND.",
+    "joined_on": "2022-01-29T15:21:47.402Z",
+    "posts": [""],
+    "likes": [""],
+    "dislikes": [""]
+  }
+}
