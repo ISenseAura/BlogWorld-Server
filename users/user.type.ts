@@ -7,6 +7,7 @@ interface UserType {
     posts : Array<string>;
     likes : Array<string>;
     dislikes : Array<string>;
+    ip : string;
 }
 
 interface AuthorType {

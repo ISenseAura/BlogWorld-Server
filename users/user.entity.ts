@@ -14,6 +14,7 @@ class User implements UserType {
     public posts: Array<string>;
     public likes : Array<string>;
     public dislikes : Array<string>;
+    public ip : string;
 
     constructor(data: UserType) {
         this.username = data.username;
@@ -24,6 +25,7 @@ class User implements UserType {
         this.posts = data.posts ? data.posts : [""];
         this.likes = data.likes ? data.likes : [""];
       this.dislikes = data.dislikes ? data.dislikes : [""];
+      this.ip = data.ip ? data.ip : '';
     }
 
     public addPost(title: string, data: Dict<BlogBody>, short : string): PostType {
