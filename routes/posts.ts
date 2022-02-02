@@ -21,8 +21,8 @@ router.post(
     body("text", "Enter some more text").isLength({
       min: 50
     }),
-    body("short", "Enter a short description (minimum 20 letters maximum 70 letters)").isLength({
-      min: 20,max : 70
+    body("short", "Enter a short description (minimum 20 letters maximum 150 letters)").isLength({
+      min: 20,max : 150
     })
   ],
   async (req: any, res: any) => {
