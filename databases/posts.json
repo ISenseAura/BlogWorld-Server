@@ -1,73 +1,10 @@
-{
-  "askyourdoubts120525zerapium": {
-    "title": "Ask Your Doubts",
-    "author": "Zerapium",
-    "dateCreated": "2022-01-31T06:35:25.081Z",
-    "id": "askyourdoubts120525zerapium",
-    "dateModified": "2022-01-31T06:35:25.081Z",
-    "body": [
-      {
-        "img": "https://thumbs.dreamstime.com/b/handwriting-text-ask-us-conceptual-photo-accepting-questions-inquiry-showing-will-answers-any-doubts-mini-size-alarm-clock-168982999.jpg",
-        "text": "You can ask doubt your're having related to anything including <b> coding and programming </b>. Write your doubts below in the comment section and your doubts will be solved with a brief explanation as soon as possible. We will write a complete blog on your doubt and it will be posted on the homepage."
-      }
-    ],
-    "short": "You can ask doubt your're having related to anything including coding and programming.",
-    "likes": 4,
-    "dislikes": 0,
-    "comments": []
-  },
-  "aboutwebsite134419zerapium": {
-    "title": "About Website",
-    "author": "Zerapium",
-    "dateCreated": "2022-01-31T13:44:19.104Z",
-    "id": "aboutwebsite134419zerapium",
-    "dateModified": "2022-01-31T13:44:19.151Z",
-    "body": [
-      {
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9z46YfUsO9fu4czF32TYnK5HOdTbq2bxZpw&usqp=CAU",
-        "text": "I've created this website as a project to include in my resume but now I'm planning to write blogs (mostly related to coding and problem solving) and I also want to help others in programming languages through this website. If you got any doubt or problem regarding coding, you can ask it right here on this website and a solution will definitely be there. Use this website as an error-solving tool!"
-      },
-      {
-        "text": "You can create an account using your email address ,we only ask for your email and username for user registration. You can create your own blogs ,expand them and if needed delete them. Users can like ,dislike or post comments on your blog. To include an image in your blog you'll have to provide a valid link to that image. The 'upload from files' feature will be implemented soon. If you got any queries or suggestions just comment em below on this post. You need to login before posting any blog or comment.",
-        "username": "Zerapium",
-        "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR53_U-zjsp1_yASCnCvxgcnklXonC0JDf7Uw&usqp=CAU",
-        "title": "What can we do here so far?",
-        "date": "2022-01-31T13:45:43.696Z",
-        "id": "whatcanwedoheresofar134543"
-      }
-    ],
-    "short": "A short introduction to this website and what we can do here.",
-    "likes": 4,
-    "dislikes": 0,
-    "comments": [
-      {
-        "username": "Weekly Dose",
-        "email": "rhiwale813@gmail.com",
-        "text": "Great work p9!",
-        "date": "2022-01-31T13:53:42.382Z",
-        "id": "weeklydose135342"
-      },
-      {
-        "username": "Kira",
-        "email": "ayushlakra1302@gmail.com",
-        "text": "Cool UI man",
-        "date": "2022-02-01T15:51:14.762Z",
-        "id": "kira155114"
-      },
-      {
-        "username": "KITTU2914",
-        "email": "tankkritansh088@gmail.com",
-        "text": "nice website bro",
-        "date": "2022-02-09T10:12:21.401Z",
-        "id": "kittu2914101221"
-      },
-      {
-        "username": "KITTU2914",
-        "email": "tankkritansh088@gmail.com",
-        "text": "nice website bro",
-        "date": "2022-02-09T10:12:30.040Z",
-        "id": "kittu2914101230"
-      }
-    ]
-  }
-}
+{"askyourdoubts120525zerapium":{"title":"Ask Your Doubts","author":"Zerapium","dateCreated":"2022-01-31T06:35:25.081Z","id":"askyourdoubts120525zerapium","dateModified":"2022-01-31T06:35:25.081Z","body":[{"img":"https://thumbs.dreamstime.com/b/handwriting-text-ask-us-conceptual-photo-accepting-questions-inquiry-showing-will-answers-any-doubts-mini-size-alarm-clock-168982999.jpg","text":"You can ask doubt your're having related to anything including <b> coding and programming </b>. Write your doubts below in the comment section and your doubts will be solved with a brief explanation as soon as possible. We will write a complete blog on your doubt and it will be posted on the homepage."}],"short":"You can ask doubt your're having related to anything including coding and programming.","likes":4,"dislikes":0,"comments":[]},
+"aboutwebsite134419zerapium":{"title":"About Website","author":"Zerapium","dateCreated":"2022-01-31T13:44:19.104Z","id":"aboutwebsite134419zerapium","dateModified":"2022-01-31T13:44:19.151Z","body":[{"img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9z46YfUsO9fu4czF32TYnK5HOdTbq2bxZpw&usqp=CAU","text":"I've created this website as a project to include in my resume but now I'm planning to write blogs (mostly related to coding and problem solving) and I also want to help others in programming languages through this website. If you got any doubt or problem regarding coding, you can ask it right here on this website and a solution will definitely be there. Use this website as an error-solving tool!"},
+{"text":"You can create an account using your email address ,we only ask for your email and username for user registration. You can create your own blogs ,expand them and if needed delete them. Users can like ,dislike or post comments on your blog. To include an image in your blog you'll have to provide a valid link to that image. The 'upload from files' feature will be implemented soon. If you got any queries or suggestions just comment em below on this post. You need to login before posting any blog or comment.","username":"Zerapium","img":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR53_U-zjsp1_yASCnCvxgcnklXonC0JDf7Uw&usqp=CAU","title":"What can we do here so far?","date":"2022-01-31T13:45:43.696Z","id":"whatcanwedoheresofar134543"}],"short":"A short introduction to this website and what we can do here.","likes":4,"dislikes":0,"comments":[{"username":"Weekly Dose","email":"rhiwale813@gmail.com","text":"Great work p9!","date":"2022-01-31T13:53:42.382Z","id":"weeklydose135342"},
+{"username":"Kira","email":"ayushlakra1302@gmail.com","text":"Cool UI man","date":"2022-02-01T15:51:14.762Z","id":"kira155114"},
+{"username":"KITTU2914","email":"tankkritansh088@gmail.com","text":"nice website bro","date":"2022-02-09T10:12:21.401Z","id":"kittu2914101221"},
+{"username":"KITTU2914","email":"tankkritansh088@gmail.com","text":"nice website bro","date":"2022-02-09T10:12:30.040Z","id":"kittu2914101230"}]},
+"tttttttttttt124212zerapium":{"title":"tttttttttttt","author":"Zerapium","dateCreated":"2022-04-03T07:12:12.816Z","id":"tttttttttttt124212zerapium","dateModified":"2022-04-03T07:12:12.816Z","body":[{"img":"https://www.pngfind.com/pngs/m/313-3131141_questions-clipart-bubble-questions-icon-gray-png-transparent.png","text":"a little testtttttttttttttttttttttttttttttttttttttttttttttttttttta little testtttttttttttttttttttttttttttttttttttttttttttttttttttta little testtttttttttttttttttttttttttttttttttttttttttttttttttttt"}],"short":"a little testtttttttttttttttttttttttttttttttttttttttttttttttttttt","likes":0,"dislikes":0,"comments":[]},
+"kjbkbk124643zerapium":{"title":"kjbkbk","author":"Zerapium","dateCreated":"2022-04-03T07:16:43.099Z","id":"kjbkbk124643zerapium","dateModified":"2022-04-03T07:16:43.099Z","body":[{"img":"https://www.pngfind.com/pngs/m/313-3131141_questions-clipart-bubble-questions-icon-gray-png-transparent.png","text":"a little testtttttttttttttttttttttttttttttttttttttttttttttttttttt a little testtttttttttttttttttttttttttttttttttttttttttttttttttttt a little testtttttttttttttttttttttttttttttttttttttttttttttttttttt"}],"short":"a little testtttttttttttttttttttttttttttttttttttttttttttttttttttt","likes":0,"dislikes":0,"comments":[]},
+"testing135625zerapium":{"title":"Testing","author":"Zerapium","dateCreated":"2022-04-03T08:26:25.294Z","id":"testing135625zerapium","dateModified":"2022-04-03T08:26:25.295Z","body":[{"img":"https://www.pngfind.com/pngs/m/313-3131141_questions-clipart-bubble-questions-icon-gray-png-transparent.png","text":"a little testtttttttttttttttttttttttttttttttttttttttttttttttttttta little testtttttttttttttttttttttttttttttttttttttttttttttttttttta little testtttttttttttttttttttttttttttttttttttttttttttttttttttta little testtttttttttttttttttttttttttttttttttttttttttttttttttttt"}],"short":"a little testtttttttttttttttttttttttttttttttttttttttttttttttttttt","likes":0,"dislikes":0,"comments":[]},
+"anotherone135759zerapium":{"title":"Another one","author":"Zerapium","dateCreated":"2022-04-03T08:27:59.824Z","id":"anotherone135759zerapium","dateModified":"2022-04-03T08:27:59.824Z","body":[{"img":"https://www.pngfind.com/pngs/m/313-3131141_questions-clipart-bubble-questions-icon-gray-png-transparent.png","text":"a little testtttttttttttttttttttttttttttttttttttttttttttttttttttta little testtttttttttttttttttttttttttttttttttttttttttttttttttttta little testtttttttttttttttttttttttttttttttttttttttttttttttttttt"}],"short":"a little testtttttttttttttttttttttttttttttttttttttttttttttttttttt","likes":0,"dislikes":0,"comments":[]}}

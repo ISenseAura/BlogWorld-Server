@@ -1,6 +1,7 @@
 import type  { Dict }  from "../types";
 interface BlogBody {
     text : string;
+    username : string;
     img : string;
     date : Date;
     title : string;

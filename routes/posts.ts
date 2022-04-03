@@ -53,8 +53,7 @@ router.post(
         }
         return res.send({ success ,msg });
     }
-
-    let response = user.addPost(req.body.title,body,req.body.short);
+    let response = user.addPost(req.body.title,body,req.body.short,req.body.topic,req.body.cat);
 
     
     if((typeof response).toLowerCase() == "object") success = true;

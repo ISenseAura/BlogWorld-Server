@@ -35,7 +35,7 @@ router.post(
     let response = Users.addUser(req.body);
 
     let success = false;
-    if(response.length > 15) success = true;
+    if(response.length > 50) success = true;
     console.log(response);
     res.json({ success, "authtoken": response });
 

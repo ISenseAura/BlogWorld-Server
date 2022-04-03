@@ -3,6 +3,8 @@ import { UserType, Dict, BlogBody, PostType } from "../types";
 import Db from "../db";
 import Users from "./users";
 import Posts from "../posts/posts";
+import Topics from "../topics/topics";
+
 
 
 class User implements UserType {
@@ -12,6 +14,7 @@ class User implements UserType {
     public password: string;
     public joined_on: Date;
     public posts: Array<string>;
+    public topics: Array<string>;
     public likes : Array<string>;
     public dislikes : Array<string>;
     public ip : string;
@@ -23,18 +26,36 @@ class User implements UserType {
         this.password = data.password;
         this.joined_on = new Date();
         this.posts = data.posts ? data.posts : [""];
+        this.topics = data.topics ? data.topics : [""];
+
         this.likes = data.likes ? data.likes : [""];
       this.dislikes = data.dislikes ? data.dislikes : [""];
       this.ip = data.ip ? data.ip : '';
     }
 
-    public addPost(title: string, data: Dict<BlogBody>, short : string): PostType {
+    public addPost(title: string, data: Dict<BlogBody>, short : string,topic?:string,cat? :string): PostType {
         let id = Posts.createPost(title, data, this.username,short);
         console.log(id);
         this.posts.push(id);
         this.updateUser();
+        if(topic && cat) {
+          if(Topics.exists(topic,cat)) {
+            Topics.get(Topics.toId(topic),Topics.toId(cat)).addPost(id);
+          }
+          else {
+            console.log(`Topic : ${topic} ddoesnt exist`)
+          }
+        }
         return Posts.get(id);
     }
+
+    public addTopic(title: string, cat :string,color? : string | boolean, short? : string,img?:string): boolean {
+      let id = Topics.createTopic(title, cat, this.username,color,[],short,img);
+      console.log(id);
+      this.topics.push(id);
+      this.updateUser();
+      return true;
+  }
 
 public likePost(id:string) : boolean {
   let post = Posts.get(id);
