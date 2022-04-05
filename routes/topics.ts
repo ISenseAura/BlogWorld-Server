@@ -51,7 +51,7 @@ router.post(
         return res.send({ success ,msg });
     }*/
 
-    let response = user.addTopic(req.body.name,req.body.category,req.body.color,req.body.description,req.body.description);
+    let response = user.addTopic(req.body.name,req.body.category,req.body.color,req.body.description,req.body.img);
 
     
     if(response) success = true;

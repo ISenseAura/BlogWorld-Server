@@ -23,6 +23,7 @@ class Posts extends Db {
             this.data.posts[post.id] = post;
             this.exportDatabase("posts");
             console.log("post added");
+            post.parseBody();
             output = post.id;
         } catch (e: any) {
             console.log(e);

@@ -31,6 +31,7 @@ interface PostType {
     like() : void;
     dislike() : void;
     updatePost() : void;
+    parseBody() : void;
     editBlog(u : string, img : string, txt : string, title : string) : void;
     addComment(user  : string, email  : string, text : string) : void;
 }

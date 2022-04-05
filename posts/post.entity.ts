@@ -2,6 +2,17 @@ import type  { PostType,Comment, BlogBody,Dict }  from "../types";
 import Db from "../db";
 import Posts from "./posts"
 
+let formats : Dict<string> = {
+    "<BOLD>" : "<b>",
+    "</BOLD>" : "</b>",
+    "<ITA>" : "<i>",
+    "</ITA>" : "</i>",
+    "<CODE>" : "<div class='w3-code htmlHigh p-2' style='background:black;color:white;'>",
+    "</CODE>" : "</div>",
+    "<HEAD>" : "<br><h2>",
+    "</HEAD>" : "</h2>",
+}
+
 
 class Post implements PostType {
 
@@ -34,6 +45,21 @@ class Post implements PostType {
     like() : number {
         this.likes =  this.likes + 1;
         return this.likes;
+    }
+
+    parseBody() : void {
+        function replaceAll(str : string,search:string, replacement:string) {
+            var target = str;
+            return target.replace(new RegExp(search, 'g'), replacement);
+        }
+       
+        let k = Object.keys(formats);
+        for(let i = 0;i < this.body.length;i++) {
+            k.forEach((a) => {
+              this.body[i].text = replaceAll(this.body[i].text,a,formats[a]);
+            })
+        }
+        this.updatePost();
     }
 
     dislike() : number {

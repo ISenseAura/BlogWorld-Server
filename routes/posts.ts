@@ -83,6 +83,8 @@ router.get('/post/:id', (req: any, res: any) => {
   let pe = Posts.exists(id);
   if(pe) {
      post = Posts.get(id);
+     post.parseBody();
+     post = Posts.get(id);
     success = true;
     }
     else {
